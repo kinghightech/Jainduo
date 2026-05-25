@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jina Path</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./landing.css" />
+    <link rel="stylesheet" href="./components.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Course navigation">
+        <a class="brand" href="#top" aria-label="Jina Path home">
+          <span class="brand-mark" aria-hidden="true">JP</span>
+          <span>
+            <strong>Jina Path</strong>
+            <small>Jainism lessons</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <button class="nav-item is-active" data-view="home" type="button">Home</button>
+          <button class="nav-item" data-view="learn" type="button">Learn</button>
+          <button class="nav-item" data-view="review" type="button">Review</button>
+          <button class="nav-item" data-view="library" type="button">Library</button>
+          <button class="nav-item" data-view="progress" type="button">Progress</button>
+        </nav>
+
+        <section class="profile-card" aria-label="Learning stats">
+          <div>
+            <span class="stat-label">XP</span>
+            <strong id="xpValue">0</strong>
+          </div>
+          <div>
+            <span class="stat-label">Streak</span>
+            <strong><span id="streakValue">0</span>d</strong>
+          </div>
+          <div>
+            <span class="stat-label">Accuracy</span>
+            <strong id="accuracyValue">0%</strong>
+          </div>
+        </section>
+      </aside>
+
+      <main id="top" class="main">
+        <section class="landing-panel" data-panel="home" aria-labelledby="landingTitle">
+          <div class="landing-copy">
+            <p class="eyebrow">Jainism course</p>
+            <h1 id="landingTitle">Jina Path<span id="welcomeName"></span></h1>
+            <p class="landing-text">
+              A teaching-first course with short explanations, examples, checks, and review for core Jain ideas.
+            </p>
+            <form class="landing-name-form" id="landingNameForm">
+              <label for="landingNameInput">What should we call you?</label>
+              <div>
+                <input id="landingNameInput" maxlength="24" autocomplete="given-name" placeholder="Your name" />
+                <button class="secondary-btn" type="submit">Save</button>
+              </div>
+            </form>
+            <div class="landing-actions">
+              <button class="primary-btn" id="resumeButton" type="button">Start lesson</button>
+              <button class="secondary-btn" id="resetButton" type="button">Reset</button>
+            </div>
+          </div>
+
+          <div class="landing-visual" aria-hidden="true">
+            <div class="visual-card visual-card-main">
+              <span>1</span>
+              <strong>Teach</strong>
+            </div>
+            <div class="visual-path">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div class="visual-card visual-card-side">
+              <span>2</span>
+              <strong>Practice</strong>
+            </div>
+            <div class="visual-card visual-card-bottom">
+              <span>3</span>
+              <strong>Review</strong>
+            </div>
+          </div>
+
+          <div class="landing-stats" aria-label="Course highlights">
+            <span>8 lessons</span>
+            <span>Teaching cards</span>
+            <span>Progress review</span>
+          </div>
+        </section>
+
+        <section class="course-layout" data-panel="learn" hidden>
+          <div class="path-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Course path</p>
+                <h2>From first concepts to synthesis</h2>
+              </div>
+              <span class="badge" id="unitBadge">Unit 1</span>
+            </div>
+            <div id="coursePath" class="course-path" aria-label="Lesson path"></div>
+          </div>
+
+          <section class="lesson-panel" aria-label="Lesson activity">
+            <div id="lessonRoot"></div>
+            <p class="sr-only" id="liveRegion" aria-live="polite"></p>
+          </section>
+        </section>
+
+        <section class="content-panel" data-panel="review" hidden>
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Practice</p>
+              <h2>Repair mistakes and strengthen weak ideas</h2>
+            </div>
+          </div>
+          <div id="reviewRoot" class="review-grid"></div>
+        </section>
+
+        <section class="content-panel" data-panel="library" hidden>
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Concept library</p>
+              <h2>Core Jain terms and ideas</h2>
+            </div>
+          </div>
+          <div id="libraryRoot" class="library-grid"></div>
+        </section>
+
+        <section class="content-panel" data-panel="progress" hidden>
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Progress</p>
+              <h2>Your learning map</h2>
+            </div>
+          </div>
+          <div id="progressRoot" class="progress-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
