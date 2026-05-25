@@ -1,15 +1,6 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "destination": "/src/index.html" },
-    { "source": "/index.html", "destination": "/src/index.html" },
-    { "source": "/app.js", "destination": "/src/app.js" },
-    { "source": "/components.css", "destination": "/src/components.css" },
-    { "source": "/course.js", "destination": "/src/course.js" },
-    { "source": "/dashboards.js", "destination": "/src/dashboards.js" },
-    { "source": "/landing.css", "destination": "/src/landing.css" },
-    { "source": "/storage.js", "destination": "/src/storage.js" },
-    { "source": "/styles.css", "destination": "/src/styles.css" },
-    { "source": "/:path*", "destination": "/src/index.html" }
-  ]
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true
 }
